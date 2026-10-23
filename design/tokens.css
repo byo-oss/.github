@@ -1,0 +1,48 @@
+/* Tokens copied from byo.dev (byo-site/src/styles/global.css). Dark is the default; ?theme=light flips it. */
+@font-face {
+  font-family: "Geist";
+  src: url("fonts/geist-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: "Geist Mono";
+  src: url("fonts/geist-mono-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+}
+
+:root {
+  --font-sans: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+  --bg: #111111;
+  --fg: #ffffff;
+  --raise: #1c1c1c;
+  --panel: #141414;
+  --border: #333333;
+  --text-2: #bdbdbd;
+  --faint: #8f8f8f;
+  --dash: #4a4a4a;
+  --scan-bg: #1c1c1c;
+  --scan-line: rgba(255, 255, 255, 0.13);
+  --solid-fg: #111111;
+}
+
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --fg: #111111;
+  --raise: #f0f0f0;
+  --panel: #f7f7f7;
+  --border: #d4d4d4;
+  --text-2: #404040;
+  --faint: #6b6b6b;
+  --dash: #a3a3a3;
+  --scan-bg: #e4e4e4;
+  --scan-line: rgba(17, 17, 17, 0.16);
+  --solid-fg: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; }
+html, body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+body { overflow: hidden; }
+.mono { font-family: var(--font-mono); }
+.wordmark { color: var(--fg); display: block; }
+.wordmark svg { display: block; height: 100%; width: auto; }

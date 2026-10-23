@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  body { width: 1280px; height: 360px; }
+  .wrap { position: absolute; inset: 0; padding: 40px 48px; display: flex; gap: 56px; align-items: center; }
+  .copy { flex: 1; display: flex; flex-direction: column; gap: 22px; }
+  .eyebrow { font-family: var(--font-mono); font-size: 16px; color: var(--faint); }
+  .wordmark { height: 58px; }
+  h1 { font-size: 40px; line-height: 1.08; letter-spacing: -0.02em; font-weight: 600; max-width: 600px; }
+  p { font-size: 19px; line-height: 1.45; color: var(--text-2); max-width: 560px; }
+  .panel { flex: 0 0 440px; border: 1px solid var(--border); background: var(--panel); position: relative; }
+  .panel-head { display: flex; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid var(--border); font-family: var(--font-mono); font-size: 14px; color: var(--faint); }
+  .row { display: flex; justify-content: space-between; align-items: baseline; padding: 15px 18px; border-bottom: 1px dashed var(--dash); font-family: var(--font-mono); font-size: 16px; }
+  .row:last-child { border-bottom: 0; }
+  .row b { font-weight: 500; }
+  .row span { color: var(--faint); font-size: 14px; }
+  .corner { position: absolute; font-family: var(--font-mono); font-size: 13px; color: var(--faint); }
+</style>
+<div class="wrap">
+  <div class="copy">
+    <div class="eyebrow">&gt;_ bring your own</div>
+    <div class="wordmark">{{WORDMARK}}</div>
+    <h1>The SaaS you'd rent, as plugins you own.</h1>
+    <p>Open-source notifications, support and entitlements for better&#8209;auth apps. Libraries, not services: your app, your database, your users.</p>
+  </div>
+  <div class="panel">
+    <div class="panel-head"><span>package</span><span>a way out →</span></div>
+    <div class="row"><b>notifications</b><span>Knock · Novu · Courier</span></div>
+    <div class="row"><b>support</b><span>Zendesk · Plain · Front</span></div>
+    <div class="row"><b>entitlements</b><span>Autumn · Stigg · Schematic</span></div>
+    <div class="row"><b>mailer</b><span>your provider's SDK</span></div>
+    <div class="row"><b>core</b><span>shared by all of them</span></div>
+  </div>
+</div>
+<script>document.documentElement.dataset.theme = new URLSearchParams(location.search).get("theme") || "dark";</script>

@@ -1,0 +1,115 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  body { width: 1120px; height: 760px; }
+  .box { position: absolute; border: 1px solid var(--border); background: var(--panel); padding: 14px 24px; }
+  .bar { background: var(--raise); }
+  .label { position: absolute; font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
+  .cap { position: absolute; font-family: var(--font-mono); font-size: 14px; color: var(--faint); }
+  .name { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+  .pkg { font-family: var(--font-mono); font-size: 14px; color: var(--faint); margin-top: 2px; }
+  .desc { font-size: 16px; color: var(--text-2); margin-top: 10px; line-height: 1.35; }
+  .exit { font-family: var(--font-mono); font-size: 14px; color: var(--faint); margin-top: 8px; }
+  .small .desc { font-size: 15px; }
+  .item { padding: 14px 0; border-bottom: 1px dashed var(--dash); }
+  .item:first-of-type { padding-top: 6px; }
+  .item:last-of-type { border-bottom: 0; }
+  .item b { font-family: var(--font-mono); font-size: 16px; font-weight: 500; }
+  .item div { font-size: 14px; color: var(--text-2); line-height: 1.35; margin-top: 4px; }
+  .note { font-family: var(--font-mono); font-size: 14px; color: var(--faint); margin-top: 6px; }
+  .tags { display: flex; gap: 12px; margin-top: 16px; }
+  .tag { border: 1px solid var(--border); background: var(--bg); padding: 7px 14px; font-family: var(--font-mono); font-size: 14px; }
+  svg { position: absolute; inset: 0; overflow: visible; }
+  svg line { stroke: var(--faint); stroke-width: 1.5; }
+  svg .dash { stroke-dasharray: 4 4; }
+  .frame { position: absolute; border: 1px dashed var(--dash); }
+</style>
+
+<div class="box bar" style="left:32px; top:32px; width:1056px; height:76px; padding:14px 24px">
+  <div class="name">better-auth</div>
+  <div class="desc" style="margin-top:4px">users · sessions · organizations · your database adapter (drizzle, prisma, kysely)</div>
+</div>
+
+<div class="label" style="left:32px; top:134px">shared</div>
+<div class="label" style="left:360px; top:134px">plugins</div>
+<div class="label" style="left:788px; top:134px">providers you bring</div>
+
+<!-- core -->
+<div class="box" style="left:32px; top:162px; width:250px; height:404px">
+  <div class="name">@byo-oss/core</div>
+  <div class="item" style="margin-top:12px"><b>createEventBus</b><div>One onEvent handler for every package's events.</div></div>
+  <div class="item"><b>sweepAll(auth)</b><div>One cron route runs all their background work.</div></div>
+  <div class="item"><b>cleanup fan-out</b><div>One call clears an org's or member's data everywhere.</div></div>
+  <div class="note">no tables, no endpoints</div>
+</div>
+
+<!-- plugins -->
+<div class="box" style="left:360px; top:162px; width:360px; height:124px">
+  <div class="name">notifications</div><div class="pkg">@byo-oss/notifications</div>
+  <div class="desc" style="margin-top:6px">A bell, an inbox and email follow-up.</div>
+  <div class="exit" style="margin-top:4px">exit → Knock · Novu · Courier</div>
+</div>
+<div class="box" style="left:360px; top:302px; width:360px; height:124px">
+  <div class="name">support</div><div class="pkg">@byo-oss/support</div>
+  <div class="desc" style="margin-top:6px">Tickets, replies and an agent inbox.</div>
+  <div class="exit" style="margin-top:4px">exit → Zendesk · Plain · Front</div>
+</div>
+<div class="box" style="left:360px; top:442px; width:360px; height:124px">
+  <div class="name">entitlements</div><div class="pkg">@byo-oss/entitlements</div>
+  <div class="desc" style="margin-top:6px">Plans, features, limits and usage.</div>
+  <div class="exit" style="margin-top:4px">exit → Autumn · Stigg · Schematic</div>
+</div>
+
+<!-- providers -->
+<div class="box small" style="left:788px; top:162px; width:300px; height:124px">
+  <div class="name">Wraps</div><div class="pkg">@wraps.dev/email</div>
+  <div class="desc" style="margin-top:6px">Email through your own<br>AWS SES account.</div>
+</div>
+<div class="box small" style="left:788px; top:302px; width:300px; height:124px">
+  <div class="name">Mailer</div><div class="pkg">@byo-oss/mailer</div>
+  <div class="desc" style="margin-top:6px">Replies and inbound mail through<br>Wraps, SES or email-sdk.</div>
+</div>
+<div class="box small" style="left:788px; top:442px; width:300px; height:124px">
+  <div class="name">Stripe</div><div class="pkg">@better-auth/stripe</div>
+  <div class="desc" style="margin-top:6px">Which plan an org bought; the<br>catalog decides what it allows.</div>
+</div>
+
+<!-- conventions -->
+<div class="box bar" style="left:32px; top:610px; width:1056px; height:118px">
+  <div style="display:flex; align-items:baseline; gap:16px">
+    <div class="name">conventions</div>
+    <div class="pkg" style="margin:0">byo-oss/conventions · the rules that make them one system</div>
+  </div>
+  <div class="tags">
+    <div class="tag">one identity</div>
+    <div class="tag">one permission model</div>
+    <div class="tag">one way to run background work</div>
+    <div class="tag">one UI style</div>
+    <div class="tag">a documented way out</div>
+  </div>
+</div>
+
+<svg width="1120" height="760" viewBox="0 0 1120 760">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" style="fill: var(--faint)"/>
+    </marker>
+  </defs>
+  <!-- better-auth → plugins array, and core reads it -->
+  <line x1="540" y1="108" x2="540" y2="160" marker-end="url(#a)"/>
+  <line x1="157" y1="108" x2="157" y2="160" class="dash" marker-end="url(#a)"/>
+  <!-- core ↔ plugins -->
+  <line x1="284" y1="224" x2="358" y2="224" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="284" y1="364" x2="358" y2="364" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="284" y1="504" x2="358" y2="504" marker-start="url(#a)" marker-end="url(#a)"/>
+  <!-- plugins → providers -->
+  <line x1="722" y1="224" x2="786" y2="224" marker-end="url(#a)"/>
+  <line x1="722" y1="364" x2="786" y2="364" marker-end="url(#a)"/>
+  <line x1="722" y1="504" x2="786" y2="504" marker-end="url(#a)"/>
+  <!-- everything stands on the conventions -->
+  <line x1="540" y1="568" x2="540" y2="608" class="dash"/>
+</svg>
+<div class="cap" style="left:552px; top:122px">plugins: [ … ]</div>
+<div class="cap" style="left:169px; top:122px">reads the array</div>
+<script>document.documentElement.dataset.theme = new URLSearchParams(location.search).get("theme") || "dark";</script>
