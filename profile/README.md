@@ -2,7 +2,7 @@
   <a href="https://byo.dev">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/byo-oss/.github/main/profile/assets/banner-dark.png">
-      <img alt="BYO: the SaaS you'd rent, as plugins you own." src="https://raw.githubusercontent.com/byo-oss/.github/main/profile/assets/banner-light.png" width="100%">
+      <img alt="BYO: open-source tooling for better-auth apps. Notifications, customer support and plan limits as libraries." src="https://raw.githubusercontent.com/byo-oss/.github/main/profile/assets/banner-light.png" width="100%">
     </picture>
   </a>
 </p>
