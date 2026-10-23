@@ -28,7 +28,7 @@ Also here: [`conventions`](https://github.com/byo-oss/conventions), the rules th
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/byo-oss/.github/main/profile/assets/how-it-fits-dark.png">
-    <img alt="Diagram. Your app runs better-auth, which loads the BYO plugins (notifications, support, entitlements). @byo-oss/core reads that plugin list to give them one event bus, one cron sweep and one cleanup call. Providers sit outside: Wraps, the mailer and Stripe. The conventions underneath keep them one system." src="https://raw.githubusercontent.com/byo-oss/.github/main/profile/assets/how-it-fits-light.png" width="100%">
+    <img alt="Diagram. Your app runs better-auth, which loads the BYO plugins (notifications, support, entitlements). @byo-oss/core reads that plugin list to give them one event bus, one cron sweep and one cleanup call. Providers sit outside: the mailer, which notifications and support send through (Wraps, SES or email-sdk adapters), and Stripe. The conventions underneath keep them one system." src="https://raw.githubusercontent.com/byo-oss/.github/main/profile/assets/how-it-fits-light.png" width="100%">
   </picture>
 </p>
 

@@ -17,6 +17,8 @@
   .item:last-of-type { border-bottom: 0; }
   .item b { font-family: var(--font-mono); font-size: 16px; font-weight: 500; }
   .item div { font-size: 14px; color: var(--text-2); line-height: 1.35; margin-top: 4px; }
+  .item.row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:10px 0; }
+  .item.row span { font-size:14px; color:var(--text-2); }
   .note { font-family: var(--font-mono); font-size: 14px; color: var(--faint); margin-top: 6px; }
   .tags { display: flex; gap: 12px; margin-top: 16px; }
   .tag { border: 1px solid var(--border); background: var(--bg); padding: 7px 14px; font-family: var(--font-mono); font-size: 14px; }
@@ -62,13 +64,12 @@
 </div>
 
 <!-- providers -->
-<div class="box small" style="left:788px; top:162px; width:300px; height:124px">
-  <div class="name">Wraps</div><div class="pkg">@wraps.dev/email</div>
-  <div class="desc" style="margin-top:6px">Email through your own<br>AWS SES account.</div>
-</div>
-<div class="box small" style="left:788px; top:302px; width:300px; height:124px">
+<div class="box small" style="left:788px; top:162px; width:300px; height:264px">
   <div class="name">Mailer</div><div class="pkg">@byo-oss/mailer</div>
-  <div class="desc" style="margin-top:6px">Replies and inbound mail through<br>Wraps, SES or email-sdk.</div>
+  <div class="desc" style="margin-top:6px">One email sender. Pick an adapter:</div>
+  <div class="item row" style="margin-top:8px"><b>wraps</b><span>your AWS SES account</span></div>
+  <div class="item row"><b>ses</b><span>your SES v2 client</span></div>
+  <div class="item row"><b>email-sdk</b><span>any provider it carries</span></div>
 </div>
 <div class="box small" style="left:788px; top:442px; width:300px; height:124px">
   <div class="name">Stripe</div><div class="pkg">@better-auth/stripe</div>
