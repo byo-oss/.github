@@ -39,7 +39,7 @@ There is no SLA beyond the rule for dependencies below. We are a small team and 
 
 ## Vulnerabilities in a dependency
 
-A bug in a package we depend on, such as `better-auth` or `@better-auth/*`, is that project's to disclose and fix. An advisory here is a GitHub advisory, in the global database or the upstream repository, or a CVE. It counts as published when the first of those appears. When one affects a version that a BYO package's `peerDependencies` or `dependencies` range admits:
+A bug in a package we depend on, such as `better-auth` or `@better-auth/*`, is that project's to disclose and fix. An advisory here is a GitHub advisory, in the global database or the upstream repository, or a CVE. It counts as published when the first of those appears. When one affects a version that a BYO package's `peerDependencies` or `dependencies` range admits, including one pinned inside a direct dependency:
 
 - We narrow that range so it admits no affected version, and release.
 - We release within 7 days, or within 72 hours when GitHub rates the advisory critical, counted from the later of the advisory's publication and the fixed version's release.
